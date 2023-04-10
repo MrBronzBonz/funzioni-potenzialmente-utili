@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int fdf_check(char *file)
+{
+    int i = 0;
+    
+    while(file[i] != '\0')
+    {
+        if(file[i] == '.' && file[i++] == 'f')
+        {
+            i++;
+            if(file[i] == 'f' && file[i++] == 'd')
+            {
+                i++;
+                if(file[i] == 'd' && file[i++] == 'f')
+                {
+                    i++;
+                    if(file[i] == 'f' && file[i++] == '\0')
+                    return(0);
+                }
+            }
+        }
+        else
+        i++;
+    }
+    printf("file formato sbagliato");
+    return(0);
+}
+
+int main(int argc, char **argv)
+{
+    if(argc == 2)
+    {
+        fdf_check(*argv[2]);
+    }
+    return 0;
+}
