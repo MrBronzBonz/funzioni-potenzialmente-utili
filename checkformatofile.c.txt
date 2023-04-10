@@ -1,3 +1,6 @@
+//lo scopo di questa funzione è darti un'idea di come controllare che il nome di un file passato sia quello corretto.
+// WARNING! devo ancora testare il funzionamento, per ora è solo teoria.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -32,7 +35,7 @@ int main(int argc, char **argv)
 {
     if(argc == 2)
     {
-        fdf_check(*argv[2]);
+        fdf_check(argv[2]);
     }
     return 0;
 }
