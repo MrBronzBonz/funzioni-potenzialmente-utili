@@ -10,16 +10,16 @@ int fdf_check(char *file)
     
     while(file[i] != '\0')
     {
-        if(file[i] == '.' && file[i++] == 'f')
+        if(file[i] == '.' && file[i+1] == 'f')
         {
             i++;
-            if(file[i] == 'f' && file[i++] == 'd')
+            if(file[i] == 'f' && file[i+1] == 'd')
             {
                 i++;
-                if(file[i] == 'd' && file[i++] == 'f')
+                if(file[i] == 'd' && file[i+1] == 'f')
                 {
                     i++;
-                    if(file[i] == 'f' && file[i++] == '\0')
+                    if(file[i] == 'f' && file[i+1] == '\0')
                     return(0);
                 }
             }
