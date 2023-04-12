@@ -4,6 +4,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*metodo alternativo e piú compatto suggerito da: https://github.com/vpescete
+
+int	fdf_check(char *file)
+{
+	int	i;
+
+	i = 0;
+	while (file[i] != '\0')
+		i++;
+	if (file[i] == '\0')
+	{
+		if(file[i-1] == 'f' && file[i-2] == 'd' && file[i-3] == 'f' && file[i-4] == '.')
+			return (0);
+	}
+	printf("file formato sbagliato");
+	return (0);
+}*/
+
 int fdf_check(char *file)
 {
     int i = 0;
